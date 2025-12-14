@@ -16,7 +16,7 @@ const persistConfig = {
   key: "users",
   version: 1,
   storage,
-  whitelist: ["items", "lastUpdated"], // Only persist items and lastUpdated
+  whitelist: ["items", "lastUpdated"],
 };
 
 const persistedUsersReducer = persistReducer(persistConfig, usersReducer);

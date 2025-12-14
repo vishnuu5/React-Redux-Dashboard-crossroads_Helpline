@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchUsers as fetchUsersAPI } from "../../services/api";
 
-// Async thunks
 export const fetchUsers = createAsyncThunk(
   "users/fetchUsers",
   async (_, { rejectWithValue }) => {
@@ -26,7 +25,7 @@ const usersSlice = createSlice({
     addUser: (state, action) => {
       const newUser = {
         ...action.payload,
-        id: Date.now(), // Generate unique ID
+        id: Date.now(),
       };
       state.items.unshift(newUser);
       state.lastUpdated = new Date().toISOString();
@@ -49,7 +48,6 @@ const usersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // Fetch users from API
       .addCase(fetchUsers.pending, (state) => {
         state.loading = true;
         state.error = null;

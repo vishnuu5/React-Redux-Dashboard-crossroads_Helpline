@@ -104,7 +104,6 @@ function UserModal({ user, onClose }) {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
       <div className="bg-card rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden border border-border">
-        {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-white">
           <h2 className="text-xl font-bold text-foreground">
             {user ? "Edit User" : "Add New User"}
@@ -116,14 +115,11 @@ function UserModal({ user, onClose }) {
             <X className="w-5 h-5 text-muted-foreground" />
           </button>
         </div>
-
-        {/* Form */}
         <form
           onSubmit={handleSubmit}
           className="p-6 bg-white overflow-y-auto max-h-[calc(90vh-140px)]"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Name */}
             <div>
               <label
                 htmlFor="name"
@@ -147,7 +143,6 @@ function UserModal({ user, onClose }) {
               )}
             </div>
 
-            {/* Username */}
             <div>
               <label
                 htmlFor="username"
@@ -172,8 +167,6 @@ function UserModal({ user, onClose }) {
                 </p>
               )}
             </div>
-
-            {/* Email */}
             <div>
               <label
                 htmlFor="email"
@@ -196,8 +189,6 @@ function UserModal({ user, onClose }) {
                 <p className="text-destructive text-xs mt-1">{errors.email}</p>
               )}
             </div>
-
-            {/* Phone */}
             <div>
               <label
                 htmlFor="phone"
@@ -220,8 +211,6 @@ function UserModal({ user, onClose }) {
                 <p className="text-destructive text-xs mt-1">{errors.phone}</p>
               )}
             </div>
-
-            {/* Website */}
             <div>
               <label
                 htmlFor="website"
@@ -239,8 +228,6 @@ function UserModal({ user, onClose }) {
                 placeholder="www.example.com"
               />
             </div>
-
-            {/* Company */}
             <div>
               <label
                 htmlFor="companyName"
@@ -260,8 +247,6 @@ function UserModal({ user, onClose }) {
             </div>
           </div>
         </form>
-
-        {/* Footer */}
         <div className="flex justify-end gap-3 px-6 py-4 border-t border-border bg-white">
           <button
             type="button"

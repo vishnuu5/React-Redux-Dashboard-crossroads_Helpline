@@ -38,7 +38,6 @@ function Dashboard() {
 
   return (
     <div className="space-y-6">
-      {/* Stats Card */}
       <div className="card p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
@@ -70,19 +69,12 @@ function Dashboard() {
           </div>
         </div>
       </div>
-
-      {/* Error Alert */}
       {error && <ErrorAlert message={error} />}
-
-      {/* Loading State */}
       {loading && users.length === 0 ? (
         <LoadingSpinner />
       ) : (
-        /* User Table */
         <UserTable users={users} onEdit={handleEdit} />
       )}
-
-      {/* User Modal */}
       {isModalOpen && (
         <UserModal user={selectedUser} onClose={handleCloseModal} />
       )}
