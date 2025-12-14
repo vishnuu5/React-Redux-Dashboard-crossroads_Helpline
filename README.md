@@ -24,7 +24,7 @@ A modern, responsive user management dashboard built with React, Redux Toolkit, 
 
 ## Deplyoment URL
 
-[View Demo]()
+[View Demo](https://react-redux-dashboard-crossroads-he.vercel.app)
 
 ## Getting Started
 
